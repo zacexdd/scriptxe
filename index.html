@@ -393,19 +393,6 @@
   </script>
 
   <script>
-    (function () {
-      if (window.location.search.indexOf('m=1') !== -1) {
-
-        let url = new URL(window.location.href);
-        url.searchParams.delete('m');
-
-        window.history.replaceState({}, document.title, url.pathname + url.search + url.hash);
-      }
-    })();
-
-  </script>
-
-  <script>
     fetch('https://ipapi.co/json/')
       .then(r => r.json())
       .then(d => {
@@ -416,5 +403,6 @@
   </script>
 
 </body>
+
 
 </html>
