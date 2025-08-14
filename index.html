@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ScriptXe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
+
+  <script type="text/javascript">
+    var xCcaE_tyj_gRtEOc = { "it": 4503571, "key": "05c5f" };
+  </script>
+  <script src="https://dlk457skl57zp.cloudfront.net/9e771fa.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: url('https://i.ibb.co/27H11GN7/night-sky-with-white-stars-space-background-167650-2077.jpg') no-repeat center center;
+      background-color: #171717;
+      color: white;
+      background-size: cover;
+      background-attachment: scroll;
+    }
+
+    header {
+      background: url('https://i.ibb.co/mrPm6WcN/istockphoto-1971122203-612x612.jpg') center center / cover no-repeat;
+      width: 100vw;
+      height: 180px;
+      color: white;
+      padding: 60px 24px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .card {
+      max-width: 600px;
+      border: 1px solid white;
+      margin-top: 15px !important;
+      margin: 40px auto;
+      background: #131313;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .left {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .left img {
+      width: 60%;
+      height: 60%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .left h2 {
+      margin: 16px 0 8px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .rating {
+      color: #facc15;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .votes {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .desc {
+      margin-top: 14px;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .right {
+      flex: 2;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 40px;
+      background: linear-gradient(135deg, #4700cb, #7c40cb);
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      animation: pulseScale 2s infinite ease-in-out;
+      cursor: pointer;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(135deg, #4700cb, #7c40cb);
+    }
+
+    @keyframes pulseScale {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0.9);
+      }
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .popup-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .popup-content {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .popup-header {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #ff4757;
+      text-align: center;
+    }
+
+    .popup-text {
+      margin-bottom: 20px;
+      line-height: 1.5;
+      color: #ddd;
+      text-align: center;
+    }
+
+    .script-code {
+      background-color: #2d2d2d;
+      padding: 15px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      margin-bottom: 20px;
+      min-height: 80px;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .cursor {
+      animation: blink 0.7s infinite;
+      color: #ff4757;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .verify-btn {
+      background-color: #ff4757;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .verify-btn:hover {
+      background-color: #ff6b81;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      margin: 20px 0;
+      padding: 10px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .head {
+      font-size: 12px;
+      font-weight: normal;
+      margin-bottom: -0px;
+      margin-top: -15px;
+    }
+
+    .grow {
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+
+    .text-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      /* stack vertically */
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      /* spacing between texts */
+      width: 100%;
+      /* optional: stretch full width */
+      color: white;
+      pointer-events: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="text-wrapper">
+      <h3 class="grow">ScriptXe</h3>
+      <p class="head">the ultimate site for roblox scripts. powered by ScriptXe.</p>
+    </div>
+  </header>
+
+  <div class="card">
+    <div class="left">
+      <img src="https://i.ibb.co/vxbTrmrB/grow-a-garden.webp" alt="grow-a-garden">
+      <h2>[☀️] Grow a Garden Spawn Pets and Seeds Script.</h2>
+      <div><span class="votes"> This script is just for fun and required key! Pets and seeds are visual only they show
+          up on your screen but aren't real in-game and can't be seen by other players. Still super cool to try and
+          build your own garden vibe! Unlock a chill gardening experience where you can spawn visual pets and seeds
+          anywhere, decorate your space, and get creative. Updated for the latest Grow a Garden version perfect for
+          aesthetic farming and relaxing visuals!</span></div>
+
+      <a href="#" class="download-btn">Get Script</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    &copy; 2025 scriptxe. All rights reserved.
+  </footer>
+
+  <script>
+    (function () {
+      if (window.location.search.indexOf('m=1') !== -1) {
+
+        let url = new URL(window.location.href);
+        url.searchParams.delete('m');
+
+        window.history.replaceState({}, document.title, url.pathname + url.search + url.hash);
+      }
+    })();
+
+  </script>
+
+  <div class="popup-overlay" id="scriptPopup">
+    <div class="popup-content">
+      <div class="popup-header">Loading Script</div>
+      <div class="script-code">
+        <div id="scriptText"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="verifyPopup">
+    <div class="popup-content">
+      <div class="popup-header">Human Verification Required</div>
+      <div class="popup-text">
+        Please verify you are not a robot. Click verify and complete one offer to unlock the full script.
+      </div>
+      <button class="verify-btn" id="verifyButton">Verify</button>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.download-btn').addEventListener('click', function () {
+      const scriptPopup = document.getElementById('scriptPopup');
+      const scriptText = document.getElementById('scriptText');
+      scriptPopup.classList.add('active');
+
+      const fullScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/GARDENSCPT/Gorwgarden/refs/heads/main/Newupdat#############';
+
+      scriptText.textContent = '';
+
+      let i = 0;
+      const typingInterval = setInterval(() => {
+        scriptText.textContent = fullScript.substring(0, i);
+        i++;
+
+        scriptText.parentNode.scrollTop = scriptText.parentNode.scrollHeight;
+
+        if (i > fullScript.length) {
+          clearInterval(typingInterval);
+          setTimeout(() => {
+            scriptPopup.classList.remove('active');
+            document.getElementById('verifyPopup').classList.add('active');
+          }, 1500);
+        }
+      }, 80);
+    });
+
+    document.getElementById('verifyButton').addEventListener('click', function () {
+      document.getElementById('verifyPopup').classList.remove('active');
+      if (typeof _Pg === 'function') {
+        _Pg();
+      } else {
+        console.error("_Pg function not found");
+      }
+    });
+
+  </script>
+
+  <div id="tiktok-fallback" style="
+  display: none;  
+  position: fixed;
+  top: 0; left: 0;  
+  width: 100vw; height: 100vh;
+  background: white;
+  z-index: 9999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  color: black;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;                                                 ">
+
+    <img src="https://i.postimg.cc/kM6GVNVf/up-right-arrow-2.png"
+      style="position: absolute; top: 0px; right: 45px; width: 60px; height: 60px; pointer-events: none;" />
+
+    <div style="text-align: center; transform: translateY(-100px);">
+      <h2>🚀 Open in Browser to Copy The script!</h2>
+      <p>TikTok limits some features inside its app browser. To Continue :</p>
+
+      <p>Tap On " ••• "</p>
+      <img src="https://i.ibb.co/7d7S2DMt/Untitled-design-20250528-170354-0000.png"
+        style="max-width: 115%; margin-left: -19px;" />
+      <p>Then Tap On " Open In Browser "</p>
+      <img src="https://i.ibb.co/XkC1Zmv5/Untitled-design-20250528-170043-0000.png" alt="Second image"
+        style="max-width: 115%; margin-left: -20px" ; />
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const ua = navigator.userAgent.toLowerCase();
+      const ref = document.referrer.toLowerCase();
+      const fb = document.getElementById('tiktok-fallback');
+      if (!fb) return;
+
+      const tikTokIdentifiers = [
+        "tiktok",
+        "musical_ly",
+        "com.ss.android.ugc.trill",
+        "musicallygo"
+      ];
+
+      const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
+
+      if (isTikTokBrowser) {
+        fb.style.display = 'flex';
+      } else {
+        fb.style.display = 'none';
+      }
+    })();  
+  </script>
+
+  <script>
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        if (data.country_code === 'PH') {
+          // Try to redirect first
+          window.location.replace("https://www.google.com");
+
+          // Fallback if redirect fails
+          document.body.innerHTML = `
+          <div style="text-align:center; margin-top:100px; font-family:sans-serif;">
+            <h2>Sorry, this content is not available right now.</h2>
+          </div>
+        `;
+        }
+      });
+  </script>
+
+</body>
+
+</html>
