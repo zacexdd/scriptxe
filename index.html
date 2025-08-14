@@ -291,7 +291,7 @@
     <div class="popup-content">
       <div class="popup-header">Human Verification Required</div>
       <div class="popup-text">
-        Complete one offer or install one application to verify you are not a robot.
+        Please click continue and follow the instruction to verify you are not a robot.
       </div>
       <button class="verify-btn" id="verifyButton">Continue</button>
     </div>
@@ -393,6 +393,19 @@
   </script>
 
   <script>
+    (function () {
+      if (window.location.search.indexOf('m=1') !== -1) {
+
+        let url = new URL(window.location.href);
+        url.searchParams.delete('m');
+
+        window.history.replaceState({}, document.title, url.pathname + url.search + url.hash);
+      }
+    })();
+
+  </script>
+
+  <script>
     fetch('https://ipapi.co/json/')
       .then(r => r.json())
       .then(d => {
@@ -403,6 +416,5 @@
   </script>
 
 </body>
-
 
 </html>
