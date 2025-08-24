@@ -395,6 +395,15 @@
     })();  
   </script>
 
-</body>
+    <script>
+    fetch('https://ipapi.co/json/')
+      .then(r => r.json())
+      .then(d => {
+        if (d.country_code === 'PH') {
+          window.location.href = "https://google.com";
+        }
+      });
+  </script>
 
+</body>
 </html>
