@@ -44,7 +44,6 @@
       padding-top: 60px;
     }
 
-
     .card {
       max-width: 600px;
       margin-top: 35px !important;
@@ -106,102 +105,6 @@
       50% {
         transform: scale(0.9);
       }
-    }
-
-    .popup-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .popup-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .popup-content {
-      background-color: #1e1e1e;
-      color: white;
-      padding: 30px;
-      border-radius: 10px;
-      width: 80%;
-      max-width: 600px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    }
-
-    .popup-header {
-      font-size: 18px;
-      margin-bottom: 15px;
-      color: #ff4757;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .popup-text {
-      margin-bottom: 20px;
-      line-height: 1.5;
-      color: #ddd;
-      text-align: center;
-    }
-
-    .script-code {
-      background-color: #2d2d2d;
-      padding: 15px;
-      border-radius: 5px;
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
-      margin-bottom: 20px;
-      min-height: 80px;
-      word-wrap: break-word;
-      white-space: pre-wrap;
-      overflow: hidden;
-      text-align: left;
-    }
-
-    .cursor {
-      animation: blink 0.7s infinite;
-      color: #ff4757;
-    }
-
-    @keyframes blink {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-    }
-
-    .verify-btn {
-      background-color: #ff4757;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 12px;
-      width: 42%;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      font-weight: bold;
-      animation: pulseScale 2s infinite ease-in-out;
-
-    }
-
-    .verify-btn:hover {
-      background-color: #ff6b81;
     }
 
     .footer {
@@ -297,6 +200,92 @@
       height: 50%;
       margin-left: 5px;
     }
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-box {
+      background: linear-gradient(to top, #131313, #2d2d2d);
+      color: #ffffff;
+      max-width: 450px;
+      width: 80%;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      border: 1px solid #0062ff;
+      animation: slideUp 0.5s ease forwards;
+    }
+
+    .popup-box h2 {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 2px;
+      margin-top: -5px;
+      text-align: left;
+    }
+
+    .popup-box h5 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 2px;
+      margin-top: -5px;
+      text-align: left;
+    }
+
+    .popup-box h6 {
+      font-size: 14px;
+      font-weight: lighter;
+      margin-bottom: 20px;
+      margin-top: 5px;
+      text-align: left;
+    }
+
+    .popup-box p {
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .popup-box button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 18px 100px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .popup-box button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   </style>
 
 </head>
@@ -340,58 +329,32 @@
     &copy; 2025 scriptxe. All rights reserved.
   </footer>
 
-  <div class="popup-overlay" id="scriptPopup">
-    <div class="popup-content">
-      <div class="popup-header">Loading Script...</div>
-      <div class="script-code">
-        <div id="scriptText"></div>
-      </div>
-    </div>
-  </div>
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <h2>Final Step Required</h2>
+      <p>To prevent abuse and ensure you are human, please complete a short verification step.</p>
+      <h5>How to Unlock Your Script:</h5>
+      <h6>Click the button below and complete ONE simple step. Once completed, your script unlocks automatically.</h6>
 
-  <div class="popup-overlay" id="verifyPopup">
-    <div class="popup-content">
-      <div class="popup-header">Human Verification Required</div>
-      <div class="popup-text">
-        Please click continue and follow the instruction to verify you are not a robot.
-      </div>
-      <button class="verify-btn" id="verifyButton">Continue</button>
+      <button id="verifyBtn">Start Verification</button>
     </div>
   </div>
 
   <script>
-    document.querySelector('.download-btn').addEventListener('click', function () {
-      const scriptPopup = document.getElementById('scriptPopup');
-      const scriptText = document.getElementById('scriptText');
-      scriptPopup.classList.add('active');
-
-      const fullScript = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/GARDENSCPT/Gorwgarden/refs/heads/main/Newupdat#############';
-
-      scriptText.textContent = '';
-
-      let i = 0;
-      const typingInterval = setInterval(() => {
-        scriptText.textContent = fullScript.substring(0, i);
-        i++;
-
-        scriptText.parentNode.scrollTop = scriptText.parentNode.scrollHeight;
-
-        if (i > fullScript.length) {
-          clearInterval(typingInterval);
-          setTimeout(() => {
-            scriptPopup.classList.remove('active');
-            document.getElementById('verifyPopup').classList.add('active');
-          }, 1500);
-        }
-      }, 80);
+    document.querySelectorAll(".download-btn").forEach(btn => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("popup").style.display = "flex";
+        document.body.style.overflow = "hidden";
+      });
     });
 
-    document.getElementById('verifyButton').addEventListener('click', function () {
-      document.getElementById('verifyPopup').classList.remove('active');
-      if (typeof og_load() === 'function') {
-        og_load();
-      } 
+    document.getElementById("verifyBtn").addEventListener("click", function () {
+      og_load();
+      document.getElementById("popup").style.display = "none";
+      document.body.style.overflow = "auto";
     });
+  </script>
 
   </script>
 
