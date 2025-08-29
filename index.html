@@ -420,20 +420,12 @@
 
       if (isTikTokBrowser) {
         fb.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
       } else {
         fb.style.display = 'none';
+        document.body.style.overflow = 'auto';
       }
     })();  
-  </script>
-
-  <script>
-    fetch('https://ipapi.co/json/')
-      .then(r => r.json())
-      .then(d => {
-        if (d.country_code === 'PH') {
-          window.location.href = "https://google.com";
-        }
-      });
   </script>
 
 </body>

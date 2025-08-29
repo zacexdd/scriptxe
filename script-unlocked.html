@@ -131,9 +131,9 @@
       align-items: center;
       font-family: Arial, sans-serif;
       font-weight: bold;
-      font-size: 22px;
+      font-size: 18px;
       color: #ffffff;
-      margin: 35px 20px;
+      margin: 35px 16px;
     }
 
     .section-title::before {
@@ -170,16 +170,6 @@
   <footer class="footer">
     &copy; 2025 scriptxe. All rights reserved.
   </footer>
-
-  <script>
-    fetch('https://ipapi.co/json/')
-      .then(r => r.json())
-      .then(d => {
-        if (d.country_code === 'PH') {
-          window.location.href = "https://google.com";
-        }
-      });
-  </script>
 
 </body>
 
