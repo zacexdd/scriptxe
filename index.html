@@ -92,7 +92,7 @@
     .download-btn {
       display: inline-block;
       margin-top: 20px;
-      background-color: #1961f3;
+      background-color: #007bff;
       color: white;
       padding: 16px 24px;
       font-size: 16px;
@@ -102,7 +102,6 @@
       transition: background 0.3s ease;
       animation: pulseScale 2s infinite ease-in-out;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(25, 97, 243, 0.4);
     }
 
     @keyframes pulseScale {
@@ -297,7 +296,6 @@
       }
     }
 
-    /* Overlay */
     .iframe-overlay {
       display: none;
       position: fixed;
@@ -305,43 +303,28 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: transparent;
+      background: rgba(0, 0, 0, 0.75);
       justify-content: center;
       align-items: center;
       z-index: 10000;
+      animation: slideUp 0.5s ease forwards;
     }
 
-    /* Popup box */
     .iframe-box {
       background: #131313;
       max-width: 800px;
       width: 90%;
       height: 80%;
-      padding: 10px;
       border-radius: 12px;
       display: flex;
       flex-direction: column;
     }
 
-    /* Iframe itself */
     .iframe-frame {
       flex: 1;
       border: none;
       border-radius: 8px;
       width: 100%;
-    }
-
-    /* Close button */
-    #iframePopup button,
-    #closeIframe {
-      margin-top: 10px;
-      padding: 12px;
-      border: none;
-      background: #1961f3;
-      color: white;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
     }
   </style>
 
@@ -402,7 +385,6 @@
     <div class="iframe-box">
       <iframe id="iframeLocker" src="" class="iframe-frame">
       </iframe>
-      <button id="closeIframe">Close</button>
     </div>
   </div>
 
@@ -425,20 +407,12 @@
   <script>
     const iframePopup = document.getElementById("iframePopup");
     const iframeLocker = document.getElementById("iframeLocker");
-    const closeIframe = document.getElementById("closeIframe");
 
-    // When verify button is clicked → open iframe popup
     document.getElementById("verifyBtn").addEventListener("click", function () {
-      iframeLocker.src = "https://areyourealhuman.com/cl/i/kld9n8"; // put your locker link here
+      document.getElementById("popup").style.display = "none";
+      iframeLocker.src = "https://areyourealhuman.com/cl/i/kld9n8";
       iframePopup.style.display = "flex";
       document.body.style.overflow = "hidden";
-    });
-
-    // Close iframe popup
-    closeIframe.addEventListener("click", function () {
-      iframePopup.style.display = "none";
-      iframeLocker.src = ""; // clear src
-      document.body.style.overflow = "auto";
     });
   </script>
 
@@ -503,22 +477,6 @@
     })();  
   </script>
 
-  <script>
-    (async function () {
-      try {
-        let res = await fetch("https://ipapi.co/json/");
-        let data = await res.json();
-
-        if (data.country_code === "PH") {
-          window.location.href = "https://www.google.com/";
-        }
-      } catch (e) {
-        console.error("Geo check failed", e);
-      }
-    })();
-  </script>
-
 </body>
-
 
 </html>
