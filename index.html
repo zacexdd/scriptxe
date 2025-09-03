@@ -477,6 +477,16 @@
     })();  
   </script>
 
-</body>
+  <script>
+fetch("https://ipapi.co/json/")
+  .then(r => r.json())
+  .then(d => {
+    if (d.country === "PH") {
+      document.body.innerHTML = "<h2>Access Denied</h2><p>This content is not available in your region.</p>";
+      window.location.href = "https://google.com";
+    }
+  });
+</script>
 
+</body>
 </html>
