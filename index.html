@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
 
   <script type="text/javascript" id="ogjs" src="https://areyourealhuman.com/cl/js/kld9n8"></script>
-  
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1M6M1HTJ8"></script>
   <script>
@@ -36,7 +36,7 @@
 
     header {
       position: relative;
-      background-color: #1961f3;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
       width: 100%;
       height: 245px;
       color: white;
@@ -59,7 +59,7 @@
       width: 80%;
       margin-top: 35px !important;
       margin: 40px auto;
-      background: linear-gradient(to top, #131313, #2d2d2d);
+      background: #171717;
       box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
       border-radius: 16px;
       padding: 24px;
@@ -94,7 +94,7 @@
     .download-btn {
       display: inline-block;
       margin-top: 20px;
-      background-color: #007bff;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
       color: white;
       padding: 16px 24px;
       font-size: 16px;
@@ -179,7 +179,7 @@
       display: inline-block;
       width: 6px;
       height: 28px;
-      background-color: #1961f3;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
       margin-right: 10px;
       border-radius: 3px;
     }
@@ -234,7 +234,7 @@
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      border: 1px solid #0062ff;
+      border: 1px solid #ff5e62;
       animation: slideUp 0.5s ease forwards;
     }
 
@@ -270,7 +270,7 @@
     }
 
     .popup-box button {
-      background: #007bff;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
       color: #fff;
       border: none;
       padding: 14px 80px;
@@ -296,6 +296,21 @@
         transform: translateY(0);
         opacity: 1;
       }
+    }
+
+    .nights-btn {
+      display: inline-block;
+      margin-top: 0px;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      color: white;
+      padding: 16px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      animation: pulseScale 2s infinite ease-in-out;
+      cursor: pointer;
     }
   </style>
 
@@ -333,9 +348,11 @@
 
   <div class="section-title">ANOTHER SCRIPTS</div>
 
-  <img class="img3" src="https://i.postimg.cc/8cXcF18L/Untitled-design.png" alt="">
-  <h4 class="h4">​script unvaible right now</h4>
-
+  <div class="card">
+    <img class="img3" src="https://i.ibb.co/mCcx2HDc/Site-community-image.webp" alt="">
+    <h2>99 nights in the forest.</h2>
+    <a href="99-nights-in-the-forest-script.html" class="nights-btn">Continue</a>
+  </div>
   <footer class="footer">
     &copy; 2025 scriptxe. All rights reserved.
   </footer>
@@ -426,17 +443,6 @@
         document.body.style.overflow = 'auto';
       }
     })();  
-  </script>
-
-  <script>
-    fetch("https://ipapi.co/json/")
-      .then(r => r.json())
-      .then(d => {
-        if (d.country === "PH") {
-          document.body.innerHTML = "<h2>Access Denied</h2><p>This content is not available in your region.</p>";
-          window.location.href = "https://google.com";
-        }
-      });
   </script>
 
 </body>
