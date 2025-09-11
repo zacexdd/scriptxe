@@ -363,17 +363,6 @@
   </div>
 
   <script>
-    fetch('https://ipapi.co/json/')
-      .then(r => r.json())
-      .then(loc => {
-        if (loc && loc.country_code === 'PH') {
-          window.location.href = "https://www.google.com"
-        }
-      })
-      .catch(() => { })
-  </script>
-
-  <script>
     document.querySelectorAll(".download-btn").forEach(btn => {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
@@ -450,6 +439,5 @@
     })();  
   </script>
 
-</body>
-
+</body>  
 </html>
