@@ -38,7 +38,7 @@
 
         header {
             position: relative;
-            background: linear-gradient(to bottom, #2c3e50, #1a2a3a);
+            background: linear-gradient(90deg, #ff6a00, #ee0979);
             width: 100%;
             font-family: 'Fredoka', sans-serif;
             height: 245px;
@@ -104,8 +104,8 @@
         .download-btn {
             display: inline-block;
             margin-top: 35px;
-            background: #fefee3;
-            color: black;
+            background: linear-gradient(90deg, #ff6a00, #ee0979);
+            color: rgb(255, 255, 255);
             padding: 12px 24px;
             font-size: 16px;
             border-radius: 8px;
@@ -189,7 +189,7 @@
             display: inline-block;
             width: 6px;
             height: 28px;
-            background: #fefee3;
+            background: linear-gradient(180deg, #ff6a00, #ee0979);
             margin-right: 10px;
             border-radius: 3px;
         }
@@ -231,7 +231,7 @@
         }
 
         .popup-box {
-            background: linear-gradient(to bottom, #2c3e50, #1a2a3a);
+            background: #171717;
             color: #ffffff;
             max-width: 450px;
             width: 80%;
@@ -239,7 +239,6 @@
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            border: 1px solid #fefee3;
             animation: slideUp 0.5s ease forwards;
         }
 
@@ -275,8 +274,8 @@
         }
 
         .popup-box button {
-            background: #fefee3;
-            color: black;
+            background: linear-gradient(90deg, #ff6a00, #ee0979);
+            color: #ffffff;
             border: none;
             padding: 14px 80px;
             font-size: 16px;
@@ -301,6 +300,14 @@
                 transform: translateY(0);
                 opacity: 1;
             }
+        }
+
+        .download {
+            width: 18px !important;
+            height: auto !important;
+            position: relative;
+            right: 8px;
+            bottom: 2px;
         }
     </style>
 
@@ -328,7 +335,9 @@
             <h4>- Auto Shop All Trees ​🌳</h4>
             <h4> - Teleport Anywhere In The Map ​🗺️</h4>
             <h4>- FLY + SPEED ​🚀</h4>
-            <a href="#" class="download-btn">Get Script</a>
+            <a href="#" class="download-btn">
+                <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
+                Download Script</a>
         </div>
     </div>
 
