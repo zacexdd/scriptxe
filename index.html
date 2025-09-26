@@ -380,85 +380,47 @@
         });
     </script>
 
-    <div id="tiktok-fallback" style="
+<div id="tiktok-fallback" style="
       display: none;  
       position: fixed;
       top: 0; left: 0;  
       width: 100vw; height: 100vh;
       background: white;
       z-index: 9999;
-      flex-direction: column;
+      display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-family: sans-serif;
-      color: black;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-wrap: break-word;                                                 ">
-
-        <img src="https://i.postimg.cc/kM6GVNVf/up-right-arrow-2.png"
-            style="position: absolute; top: 0px; right: 45px; width: 60px; height: 60px; pointer-events: none;" />
-
-        <div style="text-align: center; transform: translateY(-100px);">
-            <h2>🚀 Open in Browser to Copy The Script!</h2>
-            <p>TikTok limits some features inside its app browser. To Continue :</p>
-
-            <p>Tap On " ••• "</p>
-            <img src="https://i.ibb.co/7d7S2DMt/Untitled-design-20250528-170354-0000.png"
-                style="max-width: 115%; margin-left: -19px;" />
-            <p>Then Tap On " Open In Browser "</p>
-            <img src="https://i.ibb.co/XkC1Zmv5/Untitled-design-20250528-170043-0000.png" alt="Second image"
-                style="max-width: 115%; margin-left: -20px" ; />
-        </div>
-    </div>
-
-    <script>
-        (function () {
-            const ua = navigator.userAgent.toLowerCase();
-            const ref = document.referrer.toLowerCase();
-            const fb = document.getElementById('tiktok-fallback');
-            if (!fb) return;
-
-            const tikTokIdentifiers = [
-                "tiktok",
-                "musical_ly",
-                "com.ss.android.ugc.trill",
-                "musicallygo"
-            ];
-
-            const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
-
-            if (isTikTokBrowser) {
-                fb.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            } else {
-                fb.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        })();  
-    </script>
-
-    Paste this before the closing </body> tag in your index.html on GitHub:
+      justify-content: center;">
+      
+    <!-- Only GIF -->
+    <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" 
+         alt="Instruction GIF" 
+         style="max-width: 100%; height: auto;" />
+</div>
 
 <script>
-    function openLinkBasedOnDevice(url) {
-        var userAgent = navigator.userAgent;
+    (function () {
+        const ua = navigator.userAgent.toLowerCase();
+        const ref = document.referrer.toLowerCase();
+        const fb = document.getElementById('tiktok-fallback');
+        if (!fb) return;
 
-        if (/(android)/i.test(userAgent)) {
-            // Android → force Chrome
-            window.location.href = 'intent://' + url.replace(/^https?:\/\//, '') + '#Intent;scheme=http;package=com.android.chrome;end;';
+        const tikTokIdentifiers = [
+            "tiktok",
+            "musical_ly",
+            "com.ss.android.ugc.trill",
+            "musicallygo"
+        ];
+
+        const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
+
+        if (isTikTokBrowser) {
+            fb.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         } else {
-            // iOS + others → open normally (Safari/default browser)
-            window.location.href = url;
+            fb.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
-    }
-
-    // Auto redirect after 0.5 sec
-    setTimeout(function () {
-        var url = "https://scriptxe.site/"; // ✅ your domain
-        openLinkBasedOnDevice(url);
-    }, 500);
+    })();
 </script>
 
 </body>
