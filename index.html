@@ -10,11 +10,6 @@
 
     <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
 
-    <script type="text/javascript">
-        var KHgoQ_kLZ_UGZJOc = { "it": 4555178, "key": "f955c" };
-    </script>
-    <script src="https://duw03nk63ml3f.cloudfront.net/2ac4262.js"></script>
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1M6M1HTJ8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -309,6 +304,30 @@
             right: 8px;
             bottom: 2px;
         }
+
+        .locker-bg {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+        }
+
+        .locker-window {
+            width: 350px;
+            height: 400px;
+            background: transparent;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #lockerIframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 
 </head>
@@ -355,6 +374,12 @@
         </div>
     </div>
 
+    <div class="locker-bg" id="lockerBg">
+        <div class="locker-window">
+            <iframe id="lockerIframe"></iframe>
+        </div>
+    </div>
+
     <script>
         document.querySelectorAll(".download-btn").forEach(btn => {
             btn.addEventListener("click", function (e) {
@@ -364,10 +389,20 @@
             });
         });
 
-        document.getElementById("verifyBtn").addEventListener("click", function () {
-            _RH();
-            document.getElementById("popup").style.display = "none";
-            document.body.style.overflow = "auto";
+        const verifyBtn = document.getElementById("verifyBtn");
+        const lockerBg = document.getElementById("lockerBg");
+        const lockerIframe = document.getElementById("lockerIframe");
+
+        verifyBtn.addEventListener("click", () => {
+            lockerBg.style.display = "flex";
+            lockerIframe.src = "https://applocked.org/cl/i/kld9n8";
+        });
+
+        lockerBg.addEventListener("click", e => {
+            if (e.target === lockerBg) {
+                lockerBg.style.display = "none";
+                lockerIframe.src = "";
+            }
         });
     </script>
 
