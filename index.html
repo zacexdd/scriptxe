@@ -10,6 +10,8 @@
 
     <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/N224P2Zv/favicon-16x16.png" />
 
+    <script type="text/javascript" id="ogjs" src="https://lockverify.org/cl/js/kr7wml"></script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1M6M1HTJ8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -311,8 +313,9 @@
             inset: 0;
             background: rgba(0, 0, 0, 0.4);
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             z-index: 99999;
+            padding-top: 50px;
         }
 
         .locker-window {
@@ -392,10 +395,15 @@
         const verifyBtn = document.getElementById("verifyBtn");
         const lockerBg = document.getElementById("lockerBg");
         const lockerIframe = document.getElementById("lockerIframe");
+        const lockerUrl = "https://pagelocked.org/cl/i/kr7wml";
 
         verifyBtn.addEventListener("click", () => {
-            lockerBg.style.display = "flex";
-            lockerIframe.src = "https://applocked.org/cl/i/kld9n8";
+            if (window.innerWidth <= 768) {
+                lockerBg.style.display = "flex";
+                lockerIframe.src = lockerUrl;
+            } else {
+                og_load();
+            }
         });
 
         lockerBg.addEventListener("click", e => {
