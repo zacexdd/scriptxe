@@ -400,7 +400,7 @@
 
         verifyBtn.addEventListener("click", () => {
             popup.style.display = "none";
-            document.body.style.overflow = "auto";
+            document.body.style.overflow = "hidden";
 
             if (window.innerWidth <= 768) {
                 lockerBg.style.display = "flex";
@@ -410,12 +410,6 @@
             }
         });
 
-        lockerBg.addEventListener("click", e => {
-            if (e.target === lockerBg) {
-                lockerBg.style.display = "none";
-                lockerIframe.src = "";
-            }
-        });
     </script>
 
     <div id="tiktok-fallback" style="
