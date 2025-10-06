@@ -315,7 +315,7 @@
             justify-content: center;
             align-items: flex-start;
             z-index: 99999;
-            padding-top: 50px;
+            padding-top: 20px;
         }
 
         .locker-window {
@@ -393,11 +393,15 @@
         });
 
         const verifyBtn = document.getElementById("verifyBtn");
+        const popup = document.getElementById("popup");
         const lockerBg = document.getElementById("lockerBg");
         const lockerIframe = document.getElementById("lockerIframe");
-        const lockerUrl = "https://pagelocked.org/cl/i/kr7wml";
+        const lockerUrl = "https://lockverify.org/cl/i/kld9n8";
 
         verifyBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+            document.body.style.overflow = "auto";
+
             if (window.innerWidth <= 768) {
                 lockerBg.style.display = "flex";
                 lockerIframe.src = lockerUrl;
