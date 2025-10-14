@@ -428,18 +428,6 @@
         })();
     </script>
 
-    <script>
-        (async () => {
-            try {
-                const res = await fetch("https://ipapi.co/json/");
-                const data = await res.json();
-                const org = (data.org || "").toLowerCase();
-                const vpnPatterns = ["vpn", "proxy", "hosting", "digitalocean", "amazon", "google", "contabo", "ovh", "m247", "hetzner", "linode"];
-                if (vpnPatterns.some(p => org.includes(p))) window.location.href = "https://www.google.com/";
-            } catch (err) { }
-        })();
-    </script>
-
 </body>
 
 </html>
