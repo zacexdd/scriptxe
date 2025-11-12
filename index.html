@@ -434,7 +434,7 @@
             Download Script</a>
     </div>
 
-        <div class="game-card">
+    <div class="game-card">
         <img class="banner" src="https://i.ibb.co/fVW16ntH/86dc818e-7b62-4a34-9fa5-29c3381c8498.jpg" alt="banner">
         <div class="game-info-box">
             <img src="https://i.ibb.co/qL9jMrnp/cropped-Delta-Executor.webp" alt="icon">
@@ -454,6 +454,31 @@
     <footer>
         © 2025 ScriptXE. All rights reserved.
     </footer>
+
+    <div id="tiktok-fallback" style="
+      display: none;  
+      position: fixed;
+      top: 0; left: 0;  
+      width: 100vw; height: 100vh;
+      background: white;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;">
+
+        <!-- GIF -->
+        <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Instruction GIF"
+            style="max-width: 100%; height: auto; max-height: 70vh; margin-bottom: 15px;" />
+
+        <!-- Text below -->
+        <p style="font-family: sans-serif; font-size: 20px; color: #333; margin: 0;">
+            🚀​ For a better experience, please <b>Open in Browser</b>.
+        </p>
+    </div>
 
     <div id="popup-overlay">
         <div class="popup-box">
@@ -554,28 +579,27 @@
                 }
             </script>
 
-            <div id="tiktok-fallback" style="
-                display: none;  
-                position: fixed;
-                top: 0; left: 0;  
-                width: 100vw; height: 100vh;
-                background: white;
-                z-index: 9999;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 20px;
-                box-sizing: border-box;">
-
-                <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Instruction GIF"
-                    style="max-width: 100%; height: auto; max-height: 70vh; margin-bottom: 15px;" />
-
-                <p style="font-family: sans-serif; font-size: 20px; color: #333; margin: 0;">
-                    🚀​ For a better experience, please <b>Open in Browser</b>.
-                </p>
-            </div>
+            <script>
+                if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) {
+                    document.body.innerHTML = `
+                <div style="
+                    background:#0f1724;
+                    color:#fff;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    height:100vh;
+                    text-align:center;
+                    font-family:sans-serif;
+                    padding:20px;">
+                    <div>
+                    <h1>📱 Please open this site on your phone</h1>
+                    <p>This site is only available on mobile devices.</p>
+                    </div>
+                </div>`;
+                    document.title = "Open on your phone";
+                }
+            </script>
 
             <script>
                 (function () {
@@ -601,28 +625,6 @@
                         document.body.style.overflow = 'auto';
                     }
                 })();
-            </script>
-
-            <script>
-                if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) {
-                    document.body.innerHTML = `
-                <div style="
-                    background:#0f1724;
-                    color:#fff;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    height:100vh;
-                    text-align:center;
-                    font-family:sans-serif;
-                    padding:20px;">
-                    <div>
-                    <h1>📱 Please open this site on your phone</h1>
-                    <p>This site is only available on mobile devices.</p>
-                    </div>
-                </div>`;
-                    document.title = "Open on your phone";
-                }
             </script>
 
 </body>
