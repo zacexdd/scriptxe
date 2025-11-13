@@ -507,6 +507,12 @@
             <iframe id="verify-iframe"></iframe>
 
             <script>
+                function toggleMenu() {
+                    document.getElementById('menu').classList.toggle('active');
+                }
+            </script>
+
+            <script>
                 function startDownload(url) {
                     const popup = document.getElementById('popup-overlay');
                     const step = document.getElementById('step-text');
@@ -559,12 +565,6 @@
             </script>
 
             <script>
-                function toggleMenu() {
-                    document.getElementById('menu').classList.toggle('active');
-                }
-            </script>
-
-            <script>
                 (function () {
                     const ua = navigator.userAgent.toLowerCase();
                     const ref = document.referrer.toLowerCase();
@@ -611,6 +611,7 @@
                     document.title = "Open on your phone";
                 }
             </script>
+
 
 </body>
 
