@@ -143,7 +143,7 @@
         }
 
         .game-card {
-            background:linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
             margin: 20px 20px;
             border-radius: 20px;
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
@@ -401,6 +401,59 @@
 
 <body>
 
+     <!-- tiktok-tracking -->
+
+    <div id="tiktok-fallback" style="
+                display: none;  
+                position: fixed;
+                top: 0; left: 0;  
+                width: 100vw; height: 100vh;
+                background: white;
+                z-index: 9999;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;">
+
+        <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Instruction GIF"
+            style="max-width: 100%; height: auto; max-height: 70vh; margin-bottom: 15px;" />
+
+        <p style="font-family: sans-serif; font-size: 20px; color: #333; margin: 0;">
+            🚀​ For a better experience, please <b>Open in Browser</b>.
+        </p>
+    </div>
+
+    <script>
+        (function () {
+            const ua = navigator.userAgent.toLowerCase();
+            const ref = document.referrer.toLowerCase();
+            const fb = document.getElementById('tiktok-fallback');
+            if (!fb) return;
+
+            const tikTokIdentifiers = [
+                "tiktok",
+                "musical_ly",
+                "com.ss.android.ugc.trill",
+                "musicallygo"
+            ];
+
+            const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
+
+            if (isTikTokBrowser) {
+                fb.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            } else {
+                fb.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        })();
+    </script>
+
+    <!-- content -->
+
     <header>
         <div class="logo"><span>ScriptXE</div>
         <div class="search-bar">
@@ -421,6 +474,8 @@
         <a href="#">Scripts</a> &gt;
         <span>99 Nights in the forest</span>
     </div>
+
+    <!-- game-card -->
 
     <div class="game-card">
         <img class="banner" src="https://i.ibb.co/GvkdPBw3/noFilter.webp" alt="banner">
@@ -456,9 +511,21 @@
             Download Now</a>
     </div>
 
+    <!-- footer -->
+
     <footer>
         © 2025 ScriptXE. All rights reserved.
     </footer>
+
+    <!-- toggle-menu -->
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+
+    <!-- verfication-steps -->
 
     <div id="popup-overlay">
         <div class="popup-box">
@@ -534,60 +601,7 @@
                 }
             </script>
 
-            <script>
-                function toggleMenu() {
-                    document.getElementById('menu').classList.toggle('active');
-                }
-            </script>
-
-            <div id="tiktok-fallback" style="
-                display: none;  
-                position: fixed;
-                top: 0; left: 0;  
-                width: 100vw; height: 100vh;
-                background: white;
-                z-index: 9999;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 20px;
-                box-sizing: border-box;">
-
-                <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Instruction GIF"
-                    style="max-width: 100%; height: auto; max-height: 70vh; margin-bottom: 15px;" />
-
-                <p style="font-family: sans-serif; font-size: 20px; color: #333; margin: 0;">
-                    🚀​ For a better experience, please <b>Open in Browser</b>.
-                </p>
-            </div>
-
-            <script>
-                (function () {
-                    const ua = navigator.userAgent.toLowerCase();
-                    const ref = document.referrer.toLowerCase();
-                    const fb = document.getElementById('tiktok-fallback');
-                    if (!fb) return;
-
-                    const tikTokIdentifiers = [
-                        "tiktok",
-                        "musical_ly",
-                        "com.ss.android.ugc.trill",
-                        "musicallygo"
-                    ];
-
-                    const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
-
-                    if (isTikTokBrowser) {
-                        fb.style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
-                    } else {
-                        fb.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    }
-                })();
-            </script>
+             <!-- pc-block -->
 
             <script>
                 if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) {
