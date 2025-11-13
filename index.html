@@ -143,12 +143,17 @@
         }
 
         .game-card {
-            background: rgba(255, 255, 255, 0.05);
+            background:linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
             margin: 20px 20px;
             border-radius: 20px;
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
             overflow: hidden;
-            border: 1px solid rgba(245, 173, 30, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(255, 177, 0, 0.15);
         }
 
         .banner {
@@ -535,42 +540,20 @@
                 }
             </script>
 
-            <script>
-                if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) {
-                    document.body.innerHTML = `
-                <div style="
-                    background:#0f1724;
-                    color:#fff;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    height:100vh;
-                    text-align:center;
-                    font-family:sans-serif;
-                    padding:20px;">
-                    <div>
-                    <h1>📱 Please open this site on your phone</h1>
-                    <p>This site is only available on mobile devices.</p>
-                    </div>
-                </div>`;
-                    document.title = "Open on your phone";
-                }
-            </script>
-
             <div id="tiktok-fallback" style="
-      display: none;  
-      position: fixed;
-      top: 0; left: 0;  
-      width: 100vw; height: 100vh;
-      background: white;
-      z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      box-sizing: border-box;">
+                display: none;  
+                position: fixed;
+                top: 0; left: 0;  
+                width: 100vw; height: 100vh;
+                background: white;
+                z-index: 9999;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;">
 
                 <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Instruction GIF"
                     style="max-width: 100%; height: auto; max-height: 70vh; margin-bottom: 15px;" />
@@ -604,6 +587,28 @@
                         document.body.style.overflow = 'auto';
                     }
                 })();
+            </script>
+
+            <script>
+                if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) {
+                    document.body.innerHTML = `
+                <div style="
+                    background:#0f1724;
+                    color:#fff;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    height:100vh;
+                    text-align:center;
+                    font-family:sans-serif;
+                    padding:20px;">
+                    <div>
+                    <h1>📱 Please open this site on your phone</h1>
+                    <p>This site is only available on mobile devices.</p>
+                    </div>
+                </div>`;
+                    document.title = "Open on your phone";
+                }
             </script>
 
 </body>
