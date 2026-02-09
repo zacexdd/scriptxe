@@ -5,28 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScriptXE</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
+            font-family: 'Exo 2', sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            background: #0a0a0a;
             color: #eee;
             text-align: center;
+            font-family: 'Exo 2', sans-serif;
         }
 
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             padding: 15px 20px;
-            background: rgba(25, 25, 45, 0.9);
+            background: #000;
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(80, 80, 80, 0.7);
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
             position: sticky;
             top: 0;
@@ -38,88 +45,32 @@
             align-items: center;
             font-weight: 700;
             font-size: 1.3rem;
-            color: #000;
+            color: #ffffff;
         }
 
         .logo span {
-            background: linear-gradient(135deg, #F5AD1E 17.71%, #F27621 86.46%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             font-weight: bold;
-            font-size: 26px;
-            font-family: 'poppins' sans-serif;
+            font-size: 20px;
+            font-family: 'Orbitron', sans-serif;
         }
 
-        .menu-icon {
-            font-size: 24px;
-            cursor: pointer;
-            display: none;
-        }
-
-        .search-bar input {
-            padding: 8px 12px;
-            border: none;
+        #searchBar {
+            font-family: 'Exo 2', sans-serif;
+            padding: 10px 100px;
+            padding-left: 40px;
             border-radius: 6px;
+            margin-top: 15px;
+            border: 1px solid rgba(80, 80, 80, 0.7);
             outline: none;
-            width: 100px;
-            transition: 0.3s;
-            background: rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            background: #141414cc;
             color: #fff;
-        }
-
-        .search-bar input:focus {
-            border: 1px solid #f5ad1e;
-            background: rgba(255, 255, 255, 0.15);
-            width: 240px;
-        }
-
-        nav {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
-
-            .search-bar input {
-                width: 140px;
-            }
-
-            nav {
-                display: none;
-                flex-direction: column;
-                background: rgba(30, 30, 50, 0.95);
-                position: absolute;
-                top: 60px;
-                right: 15px;
-                border-radius: 10px;
-                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            nav a {
-                padding: 12px 15px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #ddd;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-
-        nav a:hover {
-            color: #F5AD1E;
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
+            background-image: url('https://i.ibb.co/27VDchNc/search.png');
+            background-repeat: no-repeat;
+            background-position: 12px center;
+            background-size: 18px 18px;
         }
 
         .breadcrumb {
@@ -134,44 +85,99 @@
             color: #aaa;
         }
 
-        .breadcrumb a:hover {
-            color: #F5AD1E;
-        }
-
         .breadcrumb span {
             color: #fff;
+        }
+
+        .game-card {
+            background-color: #0F0F0FE6;
+            margin: 20px 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(50, 50, 50, 0.3);
+            padding: 12px;
+            border: 1px solid rgba(80, 80, 80, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(130, 130, 130, 0.15);
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .game-info-box {
+            display: flex;
+            gap: 15px;
+            align-items: left;
+            padding: 20px;
+        }
+
+        .game-info {
+            flex: 1;
+        }
+
+        .game-info p {
+            font-size: 16px;
+            color: #D1D5DB;
+            margin-top: 10px;
+            text-align: left;
+            margin-left: -10px;
+        }
+
+        .game-info h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 19.2px;
+            text-align: left;
+            margin-left: -10px;
+            margin-bottom: 15px;
+        }
+
+        .note {
+            margin-bottom: -5px;
+            margin-top: 5px !important;
+            font-size: 14px !important;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(20, 20, 35, 0.9);
+            background: #000000;
             color: #aaa;
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(80, 80, 80, 0.7);
             margin-top: 40px;
         }
 
         .download-btn {
+            font-family: 'Orbitron', sans-serif;
             display: inline-block;
-            background: linear-gradient(180deg, #F5AD1E 17.71%, #F27621 86.46%);
+            background: linear-gradient(135deg, #333333, #222222);
+            border: 1px solid #444444;
+            box-shadow: 0 4px 15px rgba(40, 40, 40, 0.5);
             color: #ffffff;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 6px;
-            padding: 12px 24px;
-            margin-bottom: 25px;
-            margin-top: 25px;
+            padding: 12px 64px;
+            margin-bottom: 15px;
+            margin-top: 15px;
             font-size: 14px;
             font-weight: bold;
-            border-radius: 16px;
+            border-radius: 6px;
             text-decoration: none;
             white-space: nowrap;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            animation: pulse 2s infinite;
-            box-shadow: 0 0 10px rgba(242, 118, 33, 0.6);
             -webkit-tap-highlight-color: transparent;
+        }
+
+        .download-btn:active {
+            transform: translateY(-3px);
         }
 
         @keyframes pulse {
@@ -193,45 +199,51 @@
             right: 5px;
         }
 
+        .text {
+            margin-top: 15px;
+            font-weight: lighter;
+            font-size: 14px;
+            margin-left: 10px;
+            text-align: left;
+        }
+
         .title {
             margin-top: 15px;
             font-size: 20px;
             margin-left: 10px;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        .krnl-logo {
-            width: 350px;
-            margin-top: 15px;
-            border-radius: 16px;
+            text-align: left;
         }
 
         .code-container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #f4f4f4;
-            border-radius: 12px;
-            padding: 16px;
-            overflow-x: auto;
-            font-family: 'Poppins', sans-serif;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-        .code-container pre {
-            margin: 0;
+            background-color: #0F0F0FE6;
+            margin: 20px 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(50, 50, 50, 0.3);
+            padding: 12px;
+            border: 1px solid rgba(80, 80, 80, 0.7);
+            text-align: left;
+            color: #D1D5DB;
             font-size: 14px;
-            line-height: 1.5;
-            color: #222;
+            overflow-x: auto;
             white-space: pre-wrap;
             word-wrap: break-word;
         }
 
+        .code-container pre {
+            margin: 0;
+        }
+
         .code-container code {
-            font-family:  monospace;
-            font-weight: 500;
+            font-family: monospace;
+        }
+
+        .krnl-logo {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -239,48 +251,65 @@
 <body>
 
     <header>
-        <div class="logo"><span>ScriptXE</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search Scripts...">
-        </div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <nav id="menu">
-            <a href="#">Home</a>
-            <a href="#">Games</a>
-            <a href="#">Mods</a>
-            <a href="#">Contact</a>
-        </nav>
+        <div class="logo"><span>SCRIPTXE HUB</span></div>
+        <input type="text" id="searchBar" placeholder="Search for scripts...">
     </header>
 
     <div class="breadcrumb">
         <a href="#">Home</a> &gt;
         <a href="#">Games</a> &gt;
         <a href="#">Scripts</a> &gt;
-        <span>99 Nights in the forest</span>
+        <span>Download</span>
     </div>
 
-    <h3 class="title">99 nights in the forest script</h3>
-
-    <div class="code-container">
-        <pre><code>loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/nightsintheforest.lua", true))()</code></pre>
+    <div class="game-card">
+        <div class="code-container">
+            <pre><code>loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/nightsintheforest.lua", true))()</code></pre>
+        </div>
+        <div class="game-info-box">
+            <div class="game-info">
+                <h3>99 nights in the forest script</h3>
+                <p class="note">▶ Voidware script</p>
+                <p class="note">▶ Auto chop trees</p>
+                <p class="note">▶ bring items</p>
+            </div>
+        </div>
     </div>
 
-    <h3 class="title">Excuter to run the script</h3>
-
-    <div><img class="krnl-logo" src="https://i.ibb.co/fVW16ntH/86dc818e-7b62-4a34-9fa5-29c3381c8498.jpg"></div>
-
-    <a href="https://delta-executor.com" class="download-btn">
-        <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
-        Download Excuter</a>
+    <div class="game-card">
+        <img class="banner krnl-logo" src="https://i.ibb.co/fVW16ntH/86dc818e-7b62-4a34-9fa5-29c3381c8498.jpg"
+            alt="Delta Executor">
+        <div class="game-info-box">
+            <div class="game-info">
+                <h3>Delta Excuter</h3>
+                <p class="note">▶ Excuter to run the script</p>
+                <p class="note">▶ Safe and protected</p>
+                <p class="note">▶ Aunty ban</p>
+            </div>
+        </div>
+        <a href="https://delta-executor.com" class="download-btn">
+            <img src="https://i.ibb.co/JjnGSGMN/downloads-2.png" class="download" alt="downloads">
+            Download Executor</a>
+    </div>
 
     <footer>
         © 2025 ScriptXE. All rights reserved.
     </footer>
 
     <script>
-        function toggleMenu() {
-            document.getElementById('menu').classList.toggle('active');
-        }
+        const searchBar = document.getElementById("searchBar");
+
+        searchBar.addEventListener("input", function () {
+            const query = searchBar.value.toLowerCase();
+            const headings = document.querySelectorAll("h3");
+
+            for (let h of headings) {
+                if (query !== "" && h.textContent.toLowerCase().startsWith(query)) {
+                    h.scrollIntoView({ behavior: "smooth", block: "center" });
+                    break;
+                }
+            }
+        });
     </script>
 
 </body>
